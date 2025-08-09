@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="assets/images/favicons/contact.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Brayant Modo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li class="active-link"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page-container">
+        <div class="contact-form-wrapper">
+            <h2>Get in Touch with Me<br />I'll help you find</h2>
+
+            <form id="contact-form-submission">
+                <div class="form-row">
+                    <div>
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="firstName" placeholder="Enter your first name" required />
+                    </div>
+                    <div>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="lastName" placeholder="Enter your last name" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your work email" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required></select>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-button">
+                    Submit
+                    <div class="spinner-border visually-hidden" role="status"></div>
+                </button>
+                <div id="form-status" style="margin-top: 1rem;"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/romeo-ngwa-7560a42b5" target="_blank">
+                <img src="assets/images/social_icons/linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="https://www.tiktok.com/@coordinator237?_t=ZM-8yjSBF8T2Vs&_r=1" target="_blank">
+                <img src="assets/images/social_icons/tiktok.png" alt="TikTok" />
+            </a>
+            <a href="https://www.facebook.com/share/1GLgyKwtRA/" target="_blank">
+                <img src="assets/images/social_icons/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://wa.me/+237654720575" target="_blank">
+                <img src="assets/images/social_icons/whatsapp.png" alt="WhatsApp" />
+            </a>
+        </div>
+        <p class="copyright">&copy; 2025 Brayant Modo. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/countries.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>

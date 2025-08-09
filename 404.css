@@ -1,0 +1,123 @@
+/* ---------------------------------------------------- */
+/* 404 PAGE STYLES */
+/* ---------------------------------------------------- */
+
+.error-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 900;
+    color: #FFD700;
+    margin: 0;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 0;
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+/* Animated Computer */
+.computer-container {
+    width: 250px;
+    height: 180px;
+    background: #5c5c5c;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.screen {
+    width: 90%;
+    height: 80%;
+    background: #fff;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    position: relative;
+    animation: blink 2s infinite;
+}
+
+.mouth {
+    width: 40px;
+    height: 20px;
+    border: 5px solid #1a1a1a;
+    border-bottom: none;
+    border-radius: 50px 50px 0 0;
+    margin-top: 10px;
+}
+
+.stand {
+    width: 40px;
+    height: 20px;
+    background: #5c5c5c;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.base {
+    width: 150px;
+    height: 10px;
+    background: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px;
+}
+
+@keyframes blink {
+    0%, 20%, 80%, 100% { height: 20px; }
+    10%, 90% { height: 5px; }
+}

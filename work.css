@@ -1,0 +1,121 @@
+/* ---------------------------------------------------- */
+/* WORK PAGE STYLES */
+/* ---------------------------------------------------- */
+
+.work-page {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: #000;
+}
+
+.intro-text {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    padding: 0 20%;
+    margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 0 5%;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #2c2c2c;
+    border: 2px solid gold;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+    /* This property ensures the grid item maintains a 1:1 aspect ratio (a square) */
+    aspect-ratio: 1 / 1;
+}
+
+.grid-item:hover {
+    border-color: white;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 100%; /* The image will now fill the square container */
+    object-fit: cover; /* This will crop the image to fit the container without stretching */
+    display: block;
+}
+
+/* New style for the tiny hover thumbnail pop-up */
+.hover-thumbnail-popup {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* Prevents the hover thumbnail from interfering with clicks on the grid item */
+}
+
+/* Style for the pop-up when it's active */
+.hover-thumbnail-popup.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Pop-up Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: calc(100vh - 150px);
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

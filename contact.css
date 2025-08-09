@@ -1,0 +1,174 @@
+/* ---------------------------------------------------- */
+/* CONTACT PAGE STYLES */
+/* ---------------------------------------------------- */
+
+.contact-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+.contact-form-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+#contact-form-submission {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+#contact-form-submission h2 {
+    color: #FFD700;
+    margin-bottom: 2rem;
+}
+
+#contact-form-submission label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row > div {
+    flex: 1;
+}
+
+#contact-form-submission input,
+#contact-form-submission textarea,
+#contact-form-submission select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* This is the new rule to fix the dropdown list */
+#contact-form-submission select option {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#contact-form-submission input::placeholder,
+#contact-form-submission textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#contact-form-submission textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#contact-form-submission select {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23FFD700" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em 1em;
+}
+
+#contact-form-submission button {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #FFD700;
+    background-color: #FFD700;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form-submission button:hover {
+    background-color: transparent;
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .contact-page-container {
+        padding: 2rem 1rem;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row > div {
+        margin-bottom: 1rem;
+    }
+    #contact-form-submission h2 {
+        font-size: 1.5rem;
+    }
+    #contact-form-submission label,
+    #contact-form-submission input,
+    #contact-form-submission textarea,
+    #contact-form-submission select {
+        font-size: 0.9rem;
+    }
+}
+
+/* Spinner styles */
+.spinner-border {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-bottom;
+    border: .15em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+    margin-left: 0.5rem;
+}
+
+/* Keyframes for the spinner animation */
+@-webkit-keyframes spinner-border {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Utility class to hide visually */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}

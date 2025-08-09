@@ -1,0 +1,175 @@
+/* style.css */
+
+/* Using your color palette */
+:root {
+    --primary-bg: #121212; /* Matte Black */
+    --primary-text: #ffffff; /* White */
+    --accent-gold: #FFD700; /* Gold */
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generic container for alignment */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Paysika Internship Section --- */
+.paysika-section {
+    padding: 80px 0;
+}
+
+.paysika-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.paysika-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.paysika-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.paysika-text h2 {
+    font-size: 2.5em;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.paysika-text p {
+    font-size: 1.1em;
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* Mobile responsive styling for Paysika section */
+@media (max-width: 768px) {
+    .paysika-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .paysika-text {
+        text-align: center;
+    }
+}
+
+/* --- Interactive Timeline Styling --- */
+.services-container {
+    padding: 100px 0;
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 50%; /* Make space for the line */
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-text); /* The main vertical line */
+}
+
+/* The single animated dot */
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out; /* Smooth transition for the dot movement */
+    z-index: 2;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-item {
+    position: relative;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.service-content {
+    width: 350px; /* Reduced fixed width for smaller boxes */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* Active service item styling */
+.service-item.active .service-content {
+    transform: scale(1.05); /* Slightly enlarge the active box */
+    border: 1px solid var(--accent-gold); /* Add a gold border */
+}
+
+/* Alternate content on the left and right of the line */
+.service-item:nth-child(even) .service-content {
+    margin-left: 55%;
+}
+
+.service-item:nth-child(odd) .service-content {
+    margin-right: 55%;
+    text-align: right;
+}
+
+.service-content h3 {
+    color: var(--accent-gold);
+}
+
+/* Mobile responsive styling for timeline */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+    .timeline::before {
+        left: 20px;
+        transform: none;
+    }
+    .timeline-dot {
+        left: 20px;
+        transform: translate(-50%, -50%);
+    }
+    .service-item {
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .service-content {
+        width: calc(100% - 60px);
+        margin-left: 20px !important;
+        text-align: left !important;
+    }
+}

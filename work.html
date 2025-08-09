@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="assets/images/favicons/work.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brayant Modo | Work</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/work.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li class="active-link"><a href="work.html">WORK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="work-page">
+        <section class="work-intro">
+            <p class="intro-text">
+                This is a brief introduction to my work. I hope you enjoy exploring the projects below.
+                Scroll down to see the work.
+            </p>
+        </section>
+
+        <section class="work-grid-section">
+            <div class="work-grid">
+                <div class="grid-item" data-project-id="1">
+                    <img src="assets/images/work-thumb/thumb-1.jpg" alt="Project 1 Thumbnail" class="project-thumbnail">
+                    <div class="hover-overlay">
+                        <img src="assets/images/work-full/full-1.jpg" alt="Project 1 Full" class="hover-thumbnail">
+                    </div>
+                </div>
+
+                <div class="grid-item" data-project-id="2">
+                    <img src="assets/images/work-thumb/thumb-2.jpg" alt="Project 2 Thumbnail" class="project-thumbnail">
+                    <div class="hover-overlay">
+                        <img src="assets/images/work-full/full-2.jpg" alt="Project 2 Full" class="hover-thumbnail">
+                    </div>
+                </div>
+
+                <div class="grid-item" data-project-id="2">
+                    <img src="assets/images/work-thumb/thumb-3.jpg" alt="Project 3 Thumbnail" class="project-thumbnail">
+                    <div class="hover-overlay">
+                        <img src="assets/images/work-full/full-3.jpg" alt="Project 3 Full" class="hover-thumbnail">
+                    </div>
+                </div>
+
+                <div class="grid-item" data-project-id="2">
+                    <img src="assets/images/work-thumb/thumb-4.jpg" alt="Project 4 Thumbnail" class="project-thumbnail">
+                    <div class="hover-overlay">
+                        <img src="assets/images/work-full/full-4.jpg" alt="Project 4 Full" class="hover-thumbnail">
+                    </div>
+                </div>
+                
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/romeo-ngwa-7560a42b5" target="_blank"><img src="assets/images/social_icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.tiktok.com/@coordinator237?_t=ZM-8yjSBF8T2Vs&_r=1" target="_blank"><img src="assets/images/social_icons/tiktok.png" alt="TikTok"></a>
+            <a href="https://www.facebook.com/share/1GLgyKwtRA/" target="_blank"><img src="assets/images/social_icons/facebook.png" alt="Facebook"></a>
+            <a href="https://wa.me/+237654720575" target="_blank"><img src="assets/images/social_icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+        <p class="copyright">&copy; 2025 Brayant Modo. All rights reserved.</p>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="Project Image">
+            <div id="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/work.js"></script>
+</body>
+</html>
